@@ -29,9 +29,9 @@ public class Main {
                 System.out.print(totalnum +"번 명언이 등록되었습니다.\n");
             }
             else if(cmd.equals("목록")){
-                for(int i = 1; i<= totalnum; i++){
-                    System.out.println("번호 / 작가 / 명언");
-                    System.out.println("----------------------");
+                System.out.println("번호 / 작가 / 명언");
+                System.out.println("----------------------");
+                for(int i = totalnum; i> 0; i--){
                     if(wiseSayingMap.containsKey(i)) { //있으면 출력
                         WiseSaying wise = wiseSayingMap.get(i);
                         System.out.println(wise.num+" / "+wise.author+" / "+wise.say);
@@ -69,9 +69,10 @@ public class Main {
                 }
             }
             else if(cmd.equals("종료")){
-                return;
+                break;
             }
         }
+        sc.close();
     }
 }
 class WiseSaying {
