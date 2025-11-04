@@ -30,6 +30,8 @@ public class Main {
             }
             else if(cmd.equals("목록")){
                 for(int i = 1; i<= totalnum; i++){
+                    System.out.println("번호 / 작가 / 명언");
+                    System.out.println("----------------------");
                     if(wiseSayingMap.containsKey(i)) { //있으면 출력
                         WiseSaying wise = wiseSayingMap.get(i);
                         System.out.println(wise.num+" / "+wise.author+" / "+wise.say);
